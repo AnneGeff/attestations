@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 :root {
-    --background-color: #f1f4fb;
+    --background-color: linear-gradient(to top right, #6699ff 0%, #ccccff 100%);
     --foreground-color: #242731;
-    --dark-background: #0a1f41; 
+    --dark-background: #0a1f41;
     --dark-foreground: #c2cafd;
     --box-background: #fefefe;
     --box-text-color: #242731;
@@ -28,7 +28,7 @@
 }
 html {
     font-family: "Lato", sans-serif;
-    background-color: var(--background-color);
+    background: var(--background-color);
     margin: 0;
 }
 h1 {
@@ -190,7 +190,7 @@ button:hover, a.button:hover {
     box-shadow: 0 5px 15px rgba(43, 187, 173, .3);
     /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); */
 }
-button.disabled, 
+button.disabled,
 a.button.disabled,
 button:hover.disabled {
     background-color: var(--button-disabled-background);
@@ -276,7 +276,7 @@ input:-webkit-autofill {
     margin: 50px auto 0 auto;
 }
 select {
-    margin-top: 15px; 
+    margin-top: 15px;
     padding: 15px;
     width: 100%;
     border-radius: 5px;
