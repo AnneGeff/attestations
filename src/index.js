@@ -64,7 +64,6 @@ async function certificateDownload(context){
 }
 
 async function downloadPDF(profile, reasons){
-    context.res.setHeader('Content-Disposition', `filename="${pdfName(profile)}"`);
     const pdf = await certificatePDF(profile, reasons);
     return type('application/pdf').send(new Buffer(pdf));
 }
@@ -90,6 +89,7 @@ async function certificateNoConfig(context){
         reasons = json.reasons.split(',');
     }
     const profile = computeProfile(json, delay);
+    context.res.setHeader('Content-Disposition', `filename="${pdfName(profile)}"`);
     return await downloadPDF(profile, reasons);
 }
 
